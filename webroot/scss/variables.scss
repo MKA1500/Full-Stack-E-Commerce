@@ -1,0 +1,27 @@
+$primary-orange: #ff7700;
+$secondary-gray: #a8a8a8;
+$white: #FFF;
+$dark-grey: #333;
+
+@mixin max-1199 {
+  @media (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+@mixin max-991 {
+  @media (max-width: 991.98px) {
+    @content;
+  }
+}
+
+@mixin max-767 {
+  @media (max-width: 767.98px) {
+    @content;
+  }
+}
+@mixin max-575 {
+  @media (max-width: 575.98px) {
+    @content;
+  }
+}
