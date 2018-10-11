@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+include("functions/functions.php");
+?>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -22,17 +25,40 @@
         <li class="menu-item"><a href="#" class="menu-link">Shopping Cert</a></li>
         <li class="menu-item"><a href="#" class="menu-link">Contact Us</a></li>
       </ul>
-
-      <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+      <div id="form">
+        <form
+          class="form-inline"
+          method="get"
+          action="results.php"
+          enctype="multipart/form-data">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search a Product"
+              aria-label="Search"
+              name="user_query" />
+            <input
+              class="btn btn-outline-primary my-2 my-sm-0"
+              type="submit"
+              name="search"
+              value="Search"
+              role="button" />
+        </form>
+      </div>
 
     </div>
   </header>
 
   <div class="sidebar">
-    sidebar
+    <h5>Categories</h5>
+    <ul class="sidebar-list" id="cats">
+      <?php getCategories(); ?>
+    </ul>
+
+    <h5>Brands</h5>
+    <ul class="sidebar-list" id="brands">
+      <?php getBrands(); ?>
+    </ul>
   </div>
   <main class="main">
     main content
