@@ -6,12 +6,12 @@ include("./header-client.php");
   <div class="sidebar">
     <h5>Categories</h5>
     <ul class="sidebar-list" id="cats">
-      <?php getCategories(); ?>
+      <?php getCategories("li"); ?>
     </ul>
 
     <h5>Brands</h5>
     <ul class="sidebar-list" id="brands">
-      <?php getBrands(); ?>
+      <?php getBrands("li"); ?>
     </ul>
   </div>
   <main class="main">

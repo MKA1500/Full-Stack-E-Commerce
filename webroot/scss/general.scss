@@ -22,6 +22,19 @@ html {
   justify-content: center;
   align-items: center;
 }
+.brand {
+  height: 2.5rem;
+  padding-left: 1rem;
+  padding-top: .25rem;
+  .shop-title {
+    font-weight: 800;
+    font-size: 1.5rem;
+    padding: 0;
+    font-style: italic;
+    margin: 0;
+    color: $primary-orange;
+  }
+}
 .header {
   height: 5rem;
   width: 100%;
@@ -31,19 +44,7 @@ html {
   top: 0;
   left: 0;
   right: 0;
-  .brand {
-    height: 2.5rem;
-    padding-left: 1rem;
-    padding-top: .25rem;
-    .shop-title {
-      font-weight: 800;
-      font-size: 1.5rem;
-      padding: 0;
-      font-style: italic;
-      margin: 0;
-      color: $primary-orange;
-    }
-  }
+  z-index: 100;
   .menu-bar {
     display: flex;
     justify-content: space-between;

@@ -1,5 +1,24 @@
 .admin-area {
+  input[type="file"] {
+    padding: .2rem;
+  }
+  .brand {
+    padding: 1rem;
+    p {
+      font-weight: 800;
+      color: $blue;
+    }
+  }
   .container {
-    padding-top: 6rem;
+    form {
+      max-width: 38rem;
+      margin: 0 auto;
+    }
+    label {
+      font-weight: 800;
+    }
+    .submit-btn {
+      float: right;
+    }
   }
 }
