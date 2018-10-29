@@ -27,13 +27,14 @@ include("../functions/functions.php");
       <div class="row">
         <div class="col-md-6 form-group">
           <label for="product_title">Title</label>
-          <input class="form-control" type="text" name="product_title">
+          <input class="form-control" type="text" name="product_title" required>
         </div>
         <div class="col-md-6 form-group">
           <label for="product_title">Category</label>
           <select
             class="form-control"
-            name="product_cat">
+            name="product_cat"
+            required>
             <option>Select a Category</option>
             <?php getCategories("option"); ?>
           </select>
@@ -44,30 +45,35 @@ include("../functions/functions.php");
           <label for="product_title">Brand</label>
           <select
             class="form-control"
-            name="product_brand">
+            name="product_brand"
+            required>
             <option>Select a Brand</option>
             <?php getBrands("option"); ?>
           </select>
         </div>
         <div class="col-md-6 form-group">
           <label for="product_title">Image</label>
-          <input class="form-control" type="file" name="product_image">
+          <input class="form-control" type="file" name="product_image" required>
         </div>
       </div>
       <div class="row">
         <div class="col-md-6 form-group">
           <label for="product_title">Price</label>
-          <input class="form-control" type="text" name="product_price">
+          <input class="form-control" type="text" name="product_price" required>
         </div>
         <div class="col-md-6 form-group">
           <label for="product_title">Keywords</label>
-          <input class="form-control" type="text" name="product_keywords">
+          <input class="form-control" type="text" name="product_keywords" required>
         </div>
       </div>
       <div class="row">
         <div class="col-12 form-group">
           <label for="product_title">Description</label>
-          <textarea class="form-control" type="text" name="product_desc" id="mytextarea"></textarea>
+          <textarea
+            class="form-control"
+            type="text"
+            name="product_desc"
+            id="mytextarea"></textarea>
         </div>
       </div>
       <div class="row">
@@ -82,3 +88,18 @@ include("../functions/functions.php");
       </div>
     </form>
   </main>
+<?php
+  if(isset($_POST['insert_post'])) {
+    $product_title = $_POST['product_title'];
+    $product_cat = $_POST['product_cat'];
+    $product_brand = $_POST['product_brand'];
+    $product_price = $_POST['product_price'];
+    $product_keywords = $_POST['product_keywords'];
+    $product_desc = $_POST['product_desc'];
+
+    $product_image = $_FILES['product_image']['name'];
+    $product_image_temp = $_FILES['product_image']['temp_name'];
+
+    echo $insert_product = "insert into products (product_cat,product_brand,product_title,product_price,product_desc,product_image,product_keywords) values ('$product_cat','$product_brand','$product_title','$product_price','$product_desc','$product_image','$product_keywords')";
+  }
+?>

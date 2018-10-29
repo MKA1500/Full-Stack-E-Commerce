@@ -4,14 +4,6 @@
       <h1 class="shop-title">agro-polo</h1>
     </div>
     <div class="menu-bar">
-      <ul class="menu-list">
-        <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
-        <li class="menu-item"><a href="#" class="menu-link">All Products</a></li>
-        <li class="menu-item"><a href="#" class="menu-link">My Account</a></li>
-        <li class="menu-item"><a href="#" class="menu-link">Sign Up</a></li>
-        <li class="menu-item"><a href="#" class="menu-link">Shopping Cert</a></li>
-        <li class="menu-item"><a href="#" class="menu-link">Contact Us</a></li>
-      </ul>
       <div id="form">
         <form
           class="form-inline"
@@ -32,5 +24,18 @@
               role="button" />
         </form>
       </div>
+      <ul class="menu-list">
+        <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+        <li class="menu-item"><a href="#" class="menu-link">All Products</a></li>
+        <li class="menu-item"><a href="#" class="menu-link">My Account</a></li>
+        <li class="menu-item"><a href="#" class="menu-link">Sign Up</a></li>
+        <li class="menu-item"><a href="#" class="menu-link">Shopping Cert</a></li>
+        <li class="menu-item"><a href="#" class="menu-link">Contact Us</a></li>
+        <li class="menu-item">
+          <a href="admin_area/insert_product.php" class="menu-link admin-link">
+            Insert Product (Admin)
+          </a>
+        </li>
+      </ul>
     </div>
   </header>
